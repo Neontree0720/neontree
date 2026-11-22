@@ -1,0 +1,171 @@
+html { scroll-behavior: smooth; }
+body {
+        background-color: var(--bg)
+    }
+    .textwrapper {
+        color: white;
+        font-family: "Figtree", "SUIT Variable", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+        font-weight: 600;
+        
+    }
+    .site-header {
+    position: sticky;      /* 스크롤해도 위에 붙어 있음 */
+    top: 1;
+    display: flex;
+    justify-content: space-between;  /* 로고는 왼쪽, 메뉴는 오른쪽 */
+    align-items: center;
+    padding: 16px 24px;
+    background: #111;
+    color: white;
+  }
+   .site-header a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .logo { font-weight: bold; font-size: 20px; }
+
+  nav a { margin-left: 20px; }
+  nav a:hover { color: #39ff14; }
+  :root {
+  --bg: #05070f;     --card: #0b1020;   --line: #1a2550;
+  --outline: #0a1468;                     /* 로고 테두리 */
+  --main: #2047d6;                        /* 로고 안쪽, 버튼 (#2b6bff에서 변경) */
+  --neon: #3ec5ff;   --text: #e8efff;   --sub: #8a9bc7;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;   /* 왼쪽 글 : 오른쪽 로고 = 1.2 : 1 */
+  align-items: center;                /* 세로 가운데 정렬 */
+  gap: 48px;
+  min-height: 100vh;                  /* 첫 화면을 꽉 채우기 */
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.eyebrow { color: var(--neon); font-size: 13px; letter-spacing: 0.15em; margin: 0 0 8px; }
+.hero h1 { font-size: clamp(48px, 8vw, 88px); font-weight: 800; line-height: 1.05; margin: 0; }
+.neon    { color: var(--neon); text-shadow: 0 0 12px #3ec5ff88; }
+.intro   { color: var(--sub); font-size: 18px; line-height: 1.6; margin: 20px 0 28px; }
+.hero-buttons { display: flex; gap: 12px; }
+
+.hero-logo { display: flex; justify-content: center; }
+.hero-logo svg {
+  width: 100%;
+  max-width: 380px; }
+
+/* 폰처럼 화면이 좁으면 위아래로 쌓기 */
+@media (max-width: 768px) {
+  .hero { grid-template-columns: 1fr; text-align: center; padding-top: 80px; }
+  .hero-logo { order: -1; }           /* 로고를 글 위로 */
+  .hero-logo svg { max-width: 200px; }
+  .hero-buttons { justify-content: center; }
+}
+.englishneontree {
+    color:#486df6
+}
+#projects {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 120px 32px;
+}
+
+/* 위쪽 제목 부분 */
+.section-head { margin-bottom: 40px; }
+.section-head h2 { font-size: 40px; font-weight: 800; margin: 0; }
+.section-desc { color: var(--sub); margin: 8px 0 0; }
+
+/* 아래 카드 격자 */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 24px;
+  color: var(--text);
+  text-decoration: none;               /* 링크 밑줄 없애기 */
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+.card:hover {
+  border-color: var(--main);
+  box-shadow: 0 0 24px #2047d644;
+  transform: translateY(-4px);         /* 마우스 올리면 살짝 떠오름 */
+}
+.card .label { color: var(--neon); font-size: 12px; letter-spacing: 0.12em; margin: 0 0 8px; }
+.card h3     { font-size: 22px; font-weight: 700; margin: 0 0 8px; }
+.card .desc  { color: var(--sub); font-size: 15px; line-height: 1.6; margin: 0; }
+.btn, .btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background .2s, box-shadow .2s, transform .2s, border-color .2s;
+}
+
+/* 프로젝트 보기 (채워진 파란 버튼) */
+.btn {
+  background: var(--main);
+  color: #fff;
+  border: 1px solid var(--main);
+}
+.btn:hover {
+  box-shadow: 0 0 20px #2047d688;
+  transform: translateY(-2px);
+}
+
+/* 연락하기 (카드 색 + 테두리 버튼) */
+.btn-outline {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+.btn-outline:hover {
+  border-color: var(--main);
+  box-shadow: 0 0 20px #2047d644;
+  transform: translateY(-2px);
+}
+.btn, .btn-outline {
+  text-decoration: none;
+}
+#contact {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 120px 32px;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;          /* 화면이 좁으면 다음 줄로 */
+  gap: 16px;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+.contact-btn:hover {
+  border-color: var(--main);
+  box-shadow: 0 0 20px #2047d644;
+  transform: translateY(-3px);
+}
+.contact-btn img { display: block; }

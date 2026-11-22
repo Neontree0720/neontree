@@ -3,33 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>네온트리의 사이트</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="textwrapper">
-        개발자 네온트리입니다 <br>
-        바이브 코딩 하다가 AI가 디자인 너무 못해서 직접 코딩하기로 함 
+      
+<section class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">PORTFOLIO</p>
+    <h1 class="neon">네온트리<br><span class="englishneontree">Neontree</span></h1>
+    <p class="intro">필요한 건 직접 만드는 프로그래머</p>
+    <div class="hero-buttons">
+      <a class="btn" href="#projects">프로젝트 보기</a>
+      <a class="btn-outline" href="#contact">여러 활동</a>
     </div>
+  </div>
+
+  <div class="hero-logo">
+    <svg viewBox="140 160 740 710" aria-label="네온트리 로고">
+      <path d="M300 190 L410 190 L623 588 L623 180 L745 212 L855 358 L724 293 L724 835 L612 835 L400 437 L400 845 L280 812 L168 665 L300 735 Z"
+            style="fill: var(--main); stroke: var(--outline); stroke-width: 14"/>
+    </svg>
+  </div>
+</section>
+<section id="projects">
+  <div class="section-head">
+    <p class="eyebrow">PROJECTS</p>
+    <h2 class="englishneontree">프로젝트 목록</h2>
+    <p class="section-desc">지금까지 만든 것들과 만들고 있는 것들.</p>
+  </div>
+
+  <div class="project-grid">
+    <a class="card" href="https://easy-entry.neontree1725.workers.dev">
+      <p class="label">CHROME EXTENSION</p>
+      <h3>이지 엔트리</h3>
+      <p class="desc">엔트리에서 상상하던 편리 기능을 하나로 모은 확장프로그램.</p>
+    </a>
+
+    <a class="card" href="#">
+      <p class="label">GAME · 제작 중</p>
+      <h3>Grab It!</h3>
+      <p class="desc">와이어로 이동하는 액션 게임.</p>
+    </a>
+
+    <a class="card" href="https://texel-neontree.vercel.app">
+      <p class="label">MINECRAFT</p>
+      <h3>리소스팩 스튜디오</h3>
+      <p class="desc">리소스팩을 쉽게 만드는 제작 도구.</p>
+    </a>
+    <!-- 카드를 더 넣으려면 <a class="card">…</a> 묶음을 복사해서 붙여 넣기 -->
+  </div>
+</section>
+<section id="contact">
+  <div class="section-head">
+    <p class="eyebrow">OTHER PROFILES</p>
+    <h2 class="englishneontree"s>여러 활동</h2>
+    <p class="section-desc">여러 플랫폼에서의 활동</p>
+  </div>
+
+  <div class="contact-links">
+   <a class="contact-btn" href="https://playentry.org/profile/5ff57f1e43b25a00dd7cf050" target="_blank" rel="noopener">
+  <img src="/icons/entry-e.svg" alt="" width="28" height="28">
+  <span>엔트리 · NEONTREE</span>
+</a>
+
+    <a class="contact-btn" href="https://github.com/neontree0720" target="_blank" rel="noopener">
+      <img src="https://cdn.simpleicons.org/github/e8efff" alt="" width="28" height="28">
+      <span>GitHub · neontree0720</span>
+    </a>
+
+    <a class="contact-btn" href="https://modrinth.com/user/Neontree0720" target="_blank" rel="noopener">
+      <img src="https://cdn.simpleicons.org/modrinth/1bd96a" alt="" width="28" height="28">
+      <span>Modrinth · Neontree0720 </span>
+    </a>
+  </div>
+</section>
 </body>
 <script>
 
 </script>
 <style>
-    body {
-        background-color:rgb(2, 0, 20);
-    }
-    .textwrapper {
-        color: white;
-        font-family: "Figtree", "SUIT Variable", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-        font-weight: 600;
-        
-    }
+    
 
 </style>
 </html>
